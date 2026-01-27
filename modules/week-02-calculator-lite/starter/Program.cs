@@ -6,43 +6,130 @@ public class Program
     {
         Console.WriteLine("=== Calculator Lite ===\n");
 
-        // TODO: Declare variables for storing user input (use descriptive names)
-        // Hint: You'll need variables for two numbers, user name, and calculation choice
+        string userName;
+        double num1;
+        double num2;
+        bool showDecimals;
 
-        // TODO: Ask for user's name (string) and greet them
-        // Example: "Enter your name: " then "Hello, [name]!"
+        int calculationCount = 0;
 
-        // TODO: Ask if they want to use decimals (bool)
-        // Example: "Use decimal precision? (yes/no): "
-        // Store as boolean (true for yes, false for no)
+        Console.Write("Enter your name: ");
+        userName = Console.ReadLine();
 
-        // TODO: Prompt user for first number (double or int based on choice)
-        // If decimals: use double.Parse()
-        // If no decimals: use int.Parse() then cast to double
+        Console.WriteLine($"Hello, {userName}!");
+        Console.Write("Use decimal precision? (yes/no): ");
+        string decimalInput = Console.ReadLine();
 
-        // TODO: Prompt user for second number (same type as first)
+        showDecimals = decimalInput == "yes";
+        Console.Write("Enter the first number: ");
+        num1 = double.Parse(Console.ReadLine());
+        Console.Write("Enter the second number: ");
+        num2 = double.Parse(Console.ReadLine());
 
-        // TODO: Calculate ALL arithmetic operations:
-        // - sum (addition: +)
-        // - difference (subtraction: -)
-        // - product (multiplication: *)
-        // - quotient (division: /)
-        // - remainder (modulus: %)
-        // - average ((num1 + num2) / 2)
+        // Addition
+        double sum = num1 + num2;
+        if (showDecimals)
+        {
+            Console.WriteLine($"Sum: {num1:F2} + {num2:F2} = {sum:F2}");
+        }
+        else
+        {
+            Console.WriteLine($"Sum: {num1:F0} + {num2:F0} = {sum:F0}");
+        }
+        calculationCount++;
+        // Subtraction
+        double difference = num1 - num2;
+        if (showDecimals)
+        {
+            Console.WriteLine($"Difference: {num1:F2} - {num2:F2} = {difference:F2}");
+        }
+        else
+        {
+            Console.WriteLine($"Difference: {num1:F0} - {num2:F0} = {difference:F0}");
+        }
+        calculationCount++;
 
-        // TODO: Display results with proper formatting
-        // Show 2 decimal places: {value:F2}
-        // Include descriptive labels for each operation
+        // Multiplication
+        double product = num1 * num2;
+        if (showDecimals)
+        {
+            Console.WriteLine($"Product: {num1:F2} * {num2:F2} = {product:F2}");
+        }
+        else
+        {
+            Console.WriteLine($"Product: {num1:F0} * {num2:F0} = {product:F0}");
+        }
+        calculationCount++;
+        // Division
+        if (num2 != 0)
+        {
+            double quotient = num1 / num2;
+            if (showDecimals)
+            {
+                Console.WriteLine($"Quotient: {num1:F2} / {num2:F2} = {quotient:F2}");
+            }
+            else
+            {
+                Console.WriteLine($"Quotient: {num1:F0} / {num2:F0} = {quotient:F0}");
+            }
 
-        // TODO: Check if second number is zero BEFORE dividing
-        // Use if statement: if (num2 == 0) { show error } else { calculate }
+            calculationCount++;
+        }
+        else
+        {
+            Console.WriteLine("Quotient: Cannot divide by zero");
+        }
+        // Modulus
+        if (num2 != 0)
+        {
+            double remainder = num1 % num2;
 
-        // TODO: Count total calculations performed (int)
-        // Display: "Performed [count] calculations for [name]!"
+            if (showDecimals)
+            {
+                Console.WriteLine($"Remainder: {num1:F2} % {num2:F2} = {remainder:F2}");
+            }
+            else
+            {
+                Console.WriteLine($"Remainder: {num1:F0} % {num2:F0} = {remainder:F0}");
+            }
 
-        // TODO: Calculate percentage difference
-        // Formula: ((num1 - num2) / num1) * 100
-        // Display with % symbol
+            calculationCount++;
+        }
+        else
+        { Console.WriteLine("Remainder: Cannot divide by zero"); }
+        // Average
+        double average = (num1 + num2) / 2;
+        if (showDecimals)
+        {
+            Console.WriteLine($"Average: ({num1:F2} + {num2:F2}) / 2 = {average:F2}");
+        }
+        else
+        {
+            Console.WriteLine($"Average: ({num1:F0} + {num2:F0}) / 2 = {average:F0}");
+        }
+
+        calculationCount++;
+        // Percentage Difference
+        if (num1 != 0)
+        {
+            double percentageDifference = ((num1 - num2) / num1) * 100;
+
+            if (showDecimals)
+            {
+                Console.WriteLine($"Percentage Difference: {percentageDifference:F2}%");
+            }
+            else
+            {
+                Console.WriteLine($"Percentage Difference: {percentageDifference:F0}%");
+            }
+
+            calculationCount++;
+        }
+        else
+        {
+            Console.WriteLine("Percentage Difference: Cannot divide by zero");
+        }
+        Console.WriteLine($"\nPerformed {calculationCount} calculations for {userName}!");
         Console.WriteLine("\nThank you for using Calculator Lite!");
     }
 }

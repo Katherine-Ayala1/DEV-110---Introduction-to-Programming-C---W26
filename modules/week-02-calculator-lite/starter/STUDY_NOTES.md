@@ -1,151 +1,113 @@
 # Week 2: Calculator Lite - Study Notes
 
-**Name:**
+**Name:** Katherine Ayala Reyes
 
 ## Understanding Data Types
 
 **What are the four data types you used in this assignment?**
-[List each data type (string, bool, int, double) and explain what kind of data each one stores]
-
-Answer:
+Answer: The four data types used are string, bool, int and double. String stores text such as user input. Bool stores true or false values, int stores whole numbers, which was used for this assignment, Double stores numbers with decimals for calculations.
 
 **Why did we use `double` instead of `int` for the calculations?**
-[Explain the difference between int and double, and why double is better for this calculator]
-
-Answer:
+Answer: we used doubles instead of int because doubles can store decimal values. This is important when it comes to math calculations since some may not result in whole numbers, this improves accuracy.
 
 **How do you convert a string to a boolean?**
-[Explain how you converted the user's "yes/no" input into a true/false value]
-
-Answer:
+Answer: if the user input is yes, then the boolean value is set to true. Otherwise it = false.
 
 ## Challenges and Solutions
 
 **Biggest challenge with this assignment:**
-[What was the hardest part? Understanding data types, getting user input, performing calculations, formatting output, or handling division by zero?]
-
-Answer:
+Answer: For me the hardest part was performing the calculations
 
 **How you solved it:**
-[Explain what you did to overcome the challenge - reviewed documentation, asked for help, tested different approaches, etc.]
-
-Answer:
+Answer:I read the instructions and followed the formulas given. I also tested my code to make sure the calculations worked.
 
 **Most confusing concept:**
-[What was hardest to understand? Parsing input, modulus operator, percentage formula, conditional formatting, or something else?]
-
-Answer:
+Answer: The most confusing concept was the percentage difference formula.
 
 ## Understanding Arithmetic Operations
 
 **What is the difference between the modulus operator (%) and division (/)?**
 [Explain what each operator does and give an example]
 
-Answer:
+Answer: the difference is that division gives the result of dividing two numbers. Modulus gives the left overs (remainder) after dividing two numbers. an example is 4/3 = 1.33333.... 4%3 = 1 because
+.333.... times 3 = 1
 
 **How do you calculate the average of two numbers?**
 [Write the formula in your own words]
 
-Answer:
+Answer: the average is calculated by adding numbers together and dividing it by the total amount of numbers used. e
+Ex: (22 + 33) / 2       or (22+33+44) / 3 = average
 
 **What is the formula for percentage difference?**
-[Explain the formula you used: ((num1 - num2) / num1) * 100]
-
-Answer:
+Answer: the formula ; ((num1 - num2) / num1) * 100 shows how much different the second number is from the first number as a percentage.
 
 ## Input and Output
 
 **How do you read user input in C#?**
-[Explain what Console.ReadLine() does and what type of data it returns]
-
-Answer:
+Answer: we read user input using Console.ReadLine(). It reads what the user types into the console and returns it as a string.
 
 **How do you convert string input to a number?**
-[Explain the Parse methods you used, like double.Parse()]
-
-Answer:
+Answer:I used double.Parse() to convert the user’s input from a string into a number in order to perform calculations.
 
 **What is string interpolation and how did you use it?**
-[Explain the $ symbol and curly braces {} in Console.WriteLine()]
-
-Answer:
+Answer:string interpolation uses $ and {} in order to insert variables such as the users name or numbers.
 
 ## Conditional Logic
 
 **How do you format numbers with 2 decimal places vs whole numbers?**
-[Explain the :F2 and :F0 format specifiers]
-
-Answer:
+Answer:I used :F2 to show numbers with two decimal places and :F0 to show whole numbers without decimals.
 
 **Why is it important to check for division by zero?**
-[Explain what happens if you try to divide by zero and how you handled it]
-
-Answer:
+Answer: Dividing by zero is mathmatically not possible, so it'll cause errors. I made sure to display an error message if it ever happens.
 
 **How did you use the boolean variable to control formatting?**
-[Explain how you used if/else to format output differently based on user preference]
-
-Answer:
+Answer:I used an if/else statement. If the value was true, the program showed decimals. If it was false, it showed whole numbers.
 
 ## What I Learned
 
 **Key takeaways from this week:**
-[What are the 3-5 most important things you learned?]
-
-1.
-2.
-3.
-4.
-5.
+1. how to use if/else statements
+2. how to perform math operations in C#
+3. how to format output
+4. how to store different data types
+5. how to read and convert user input
 
 **Which data type concept was most useful?**
-[Explain which data type (string, bool, int, or double) you found most interesting and why]
-
-Answer:
+Answer: I feel like the double data type was the most useful because it allows decimal calculations which is important to have when it comes to math.
 
 **How does conditional formatting improve user experience?**
-[Why is it helpful to let users choose decimal precision?]
-
-Answer:
+Answer:It lets users choose how results are displayed, which makes the program easier to read.
 
 ## Testing and Debugging
 
 **What test cases did you use to verify your program works?**
-[List the different inputs you tested - positive numbers, negative numbers, decimals, zero, etc.]
-
-Answer:
+Answer:I tested positive numbers, negative numbers, decimals, zero, and both “yes” and “no” for decimal precision. I also ran dotnet test.
 
 **What bugs or errors did you encounter and fix?**
-[Describe any errors you got and how you fixed them]
-
-Answer:
+Answer: I had formating issues at first which I fixed by adjusting the code.
 
 ## Time Spent
 
-**Total time:** [X hours]
+**Total time:** 3.75 hours
 
 **Breakdown:**
 
--   Understanding data types: [X hours]
--   Reading and parsing user input: [X hours]
--   Implementing arithmetic operations: [X hours]
--   Adding conditional formatting: [X hours]
--   Handling division by zero: [X hours]
--   Testing and debugging: [X hours]
--   Writing documentation: [X hours]
+-   Understanding data types: 0.5 hours
+-   Reading and parsing user input: 0.5 hours
+-   Implementing arithmetic operations: 1.5 hours
+-   Adding conditional formatting: 0.5 hours
+-   Handling division by zero: 0.25 hours
+-   Testing and debugging: 0.25 hours
+-   Writing documentation: 0.25 hours
 
-**Most time-consuming part:** [Which aspect took the longest and why?]
+**Most time-consuming part:**
 
-Answer:
+Answer: The calculations section took the longest, since I wasn't sure on how to format it.
 
 ## Reflection
 
 **What would you do differently next time?**
-[What would you change in your approach or code?]
-
-Answer:
+Answer:I would run the tests more often while coding to catch mistakes earlier.
 
 **How does this assignment prepare you for more complex programs?**
-[Why are these skills important for future programming tasks?]
-
-Answer:
+Answer:These skills are important because it can help us later on when we want to build more complex programs that involve calculations. This assignment helped us understand how different parts of the program work.
