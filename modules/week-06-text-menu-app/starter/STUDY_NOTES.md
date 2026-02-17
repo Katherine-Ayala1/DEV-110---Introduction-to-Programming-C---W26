@@ -1,100 +1,76 @@
 # Week 6: Text Menu App - Study Notes
 
-**Name:**
+**Name:** Katherine Ayala
 
 ## Loop Types
 
 **How is a `do-while` loop different from a `while` loop?**
-[Explain when each loop is best used]
-
-Answer:
+Answer:A do while loop runs at least one time before checking the condition, a while loop checks the condition first and may not run at all
 
 **Where did you use a `do-while` loop in this assignment and why?**
-[Describe how you validated the menu choice and numeric inputs]
-
-Answer:
+Answer:I used a do while loop in my input validation methods, it continously asks the user until the input is valid
 
 **Where did you use a `while` loop and why?**
-[Describe the menu loop and why it repeats]
-
-Answer:
+Answer:I used a while loop for the main menu, it repeats until the user chooses the exit option 6
 
 **Where did you use a `for` loop and why?**
-[If you didn’t use a for loop, explain why it wasn’t needed]
-
-Answer:
+Answer:I didn't use a for loop since the program doesnt need to repeat a set number of times.
 
 ## Input Validation
 
 **Why did you create a helper method for input validation?**
-[Explain how it avoids repeating code for multiple prompts]
-
-Answer:
+Answer:It avoids repeating the same code many times, It keeps the program cleaner and easier to read
 
 **How did you validate the menu choice (1–6)?**
-[Explain your range check logic and do-while loop]
-
-Answer:
+Answer: I used a TryParse to check if the input was a number, then checked if the number was 1-6. if its not then its asked again.
 
 **How did you handle invalid input (non-numbers)?**
-[Explain how int.TryParse and double.TryParse work]
-
-Answer:
+Answer:I used tryparse, if it fails the program doesn't crash, it shows a message and asks again.
 
 ## String Operations
 
 **Which string methods did you use across the different menu options?**
-[List key methods like Trim, ToUpper, ToLower, Replace, Split, Join, Contains, PadLeft, PadRight, and formatting techniques]
-
-Answer:
+Answer:trim, toUpper, ToLower, replace, split, join, contains, padleft, padright, format, interpolation
 
 **Which four string methods did you demonstrate in Option 6 (String Analysis)?**
-[Explain Equals with StringComparison, Substring, EndsWith, and IndexOf]
-
-Answer:
+Answer: equals, substring, endswith, indexof
 
 **What's the difference between string concatenation and interpolation?**
-[Explain when you used each approach and which you prefer]
-
-Answer:
+Answer:Concatenation joins strings using plus, Interpolation inserts variables inside text and Interpolation is easier to read
 
 ## What I Learned
 
 **Key takeaways from this week:**
-[3-5 main things you learned]
-
-1.
-2.
-3.
-4.
-5.
+1. Learned how to build a repeating menu
+2. Learned how to validate input
+3. Learned how to use string methods
+4. L
+5. L
 
 **Which loop felt most natural to use and why?**
-
-Answer:
+Answer:While loop felt most natural because it controls the menu
 
 ## Time Spent
 
-**Total time:** [X hours]
+**Total time:** 4 hours
 
 **Breakdown:**
 
-- Planning the loops: [X hours]
-- Input validation: [X hours]
-- String formatting: [X hours]
-- Testing and debugging: [X hours]
-- Writing documentation: [X hours]
+- Planning the loops: 1 hours
+- Input validation:  1 hours
+- String formatting: 1 hours
+- Testing and debugging: 1 hours
+- Writing documentation: 1 hours
 
-**Most time-consuming part:** [Which aspect took the longest and why?]
-
-Answer:
+**Most time-consuming part:**
+Answer:Testing and debugging took the longest because I had to match the exact output format required by the tests and fix small mistakes until everything passed.
 
 ## Reflection
 
 **What would you do differently next time?**
 
-Answer:
+Answer:Next time I would start earlier and test each menu option one at a time instead of waiting until the end. I would also run the tests more often so I could catch mistakes sooner.
 
 **How did using three different loop types improve your understanding of repetition?**
 
-Answer:
+Answer:Using three different loop types helped me understand when each one makes sense. The while loop is good when you do not know how many times something will repeat. The do while loop is useful when the code needs to run at least once. The for loop is best when you know exactly how many times something should repeat.
