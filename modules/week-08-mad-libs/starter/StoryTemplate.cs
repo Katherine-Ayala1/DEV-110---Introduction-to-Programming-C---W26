@@ -3,12 +3,14 @@
 - Instructor: Zak Brinlee
 - Term: Winter 2026
 -
-- Programmer: YourName
+- Programmer: Katherine Ayala
 - Assignment: Week 8: Mad Libs (Structure + Debugging)
 -
 - What does this program do?:
 - Represents a Mad Libs story template with prompts and story text.
 - */
+
+using System.Reflection.Metadata;
 
 namespace MadLibs;
 
@@ -27,23 +29,29 @@ public class StoryTemplate
 
     public string TemplateText { get; }
 
-    // TODO 1: Implement GenerateStory method
-    // This method should:
-    // - Validate that words.Length equals Prompts.Length
-    // - Call FormatStory to build the final story string
-    // - Return the formatted story
     public string GenerateStory(string[] words)
     {
-        throw new NotImplementedException();
-    }
+        if (words is null)
+        {
+            throw new ArgumentNullException(nameof(words));
+        }
 
-    // TODO 2: Implement FormatStory method (private helper)
-    // This method should:
-    // - Convert string[] words to object[] (required for string.Format)
-    // - Call string.Format with TemplateText and the object array
-    // - Return the formatted story
+        if (words.Length != Prompts.Length)
+        {
+            throw new ArgumentException(
+                $"Expected {Prompts.Length} words but received {words.Length}.", nameof(words)
+            );
+        }
+        return FormatStory(words);
+    }
     private string FormatStory(string[] words)
     {
-        throw new NotImplementedException();
+        object[] args = new object[words.Length];
+
+        for (int i = 0; i < words.Length; i++)
+        {
+            args[i] = words[i];
+        }
+        return string.Format(TemplateText, args);
     }
 }
